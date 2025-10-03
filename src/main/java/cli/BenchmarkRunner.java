@@ -4,13 +4,10 @@ import algorithms.BoyerMooreMajorityVote;
 import metrics.PerformanceTracker;
 import java.util.Random;
 
-/**
- * BenchmarkRunner runs Boyer-Moore Majority Vote algorithm
- * on generated arrays and measures performance.
- */
+
 public class BenchmarkRunner {
     public static void main(String[] args) {
-        int size = 1000000; // размер массива по умолчанию
+        int size = 1000000;
         if (args.length > 0) {
             try {
                 size = Integer.parseInt(args[0]);
@@ -34,7 +31,7 @@ public class BenchmarkRunner {
         System.out.println("Memory used: " + tracker.getMemoryUsed() + " KB");
     }
 
-    // генерируем массив с гарантированным majority элементом
+
     private static int[] generateArray(int size) {
         int[] arr = new int[size];
         Random rand = new Random();
